@@ -52,12 +52,11 @@ footer{
     background-color: #1c4861 ;
 }
 footer a{
-    width: 10rem;
+    max-width: 2rem;
     text-align: center;
     color: white !important;
     align-items: center;
+    margin: auto;
 }
-.menu-2{
-    display: flex;
-    align-items: center;
-}
+
+
