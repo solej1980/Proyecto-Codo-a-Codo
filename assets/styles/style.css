@@ -31,7 +31,7 @@
 }
 .texto {
     position: absolute;
-    top: 40%;
+    top: 15%;
     right:5%;
 }
 
@@ -51,12 +51,11 @@ main{
 footer{
     background-color: #1c4861 ;
 }
-footer a{
-    max-width: 7rem;
+footer .nav-item a{
     text-align: center;
     color: white !important;
-    align-items: center;
-    margin: auto;
+    
+
 }
 #seccion{
     margin-top: 2%;
