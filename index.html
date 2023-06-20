@@ -26,7 +26,7 @@
                   <a class="nav-link" href="index.html"><i class="bi bi-mic"></i>Los oradores</a>
                   <a class="nav-link" href="#"><i class="bi bi-pin-map"></i>Lugar y fecha</a>
                   <a class="nav-link" href="#"><i class="bi bi-hand-thumbs-up"></i>Conviértete en orador</a>
-                  <a class="nav-link comprar" href="#" style="color: #16cf41"><i class="bi bi-credit-card"></i>Comprar tickets</a>
+                  <a class="nav-link comprar" href="./assets/tickets/Tickets.html" style="color: #16cf41"><i class="bi bi-credit-card"></i>Comprar tickets</a>
                 </div>
               </div>
             </div>
@@ -49,16 +49,14 @@
               <img src="./assets/images/ba3.jpg" class="d-block" alt="Buenos Aires"/>
           </div>
       </div>
-      <div class="texto-flotante">
-        <div class="col 8 col-sm-9 col-md-8 col-lg-6 px-20 texto text-white text-end">
-          <h1>Conf Bs As</h1>
-          <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
-          <button type="button" class="btn btn-outline-light m-1">Quiero ser orador</button>
-          <button type="button" class="btn btn-success m-1"  style="background-color: #16cf41;">Comprar tickets</button>
-        </div>
+      <div class="col 8 col-sm-9 col-md-8 col-lg-6 px-20 texto-flotante text-white text-end">
+        <h1>Conf Bs As</h1>
+        <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+        <a href="#orador" class="btn btn-outline-light m-1">Quiero ser orador</a>
+        <a href="/assets/tickets/Tickets.html" class="btn btn-success m-1"  style="background-color: #16cf41;">Comprar tickets</a>
       </div>
-
      
+      
 
 
 
@@ -71,7 +69,7 @@
             <div class="row row-cols-1 row-cols-md-3 g-4" id="cards">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./assets/images/steve.jpg">
+                        <img src="./assets/images/steve.jpg" alt="Steve Jobs">
                         <p><span class="badge bg-warning text-black">JavaScript</span><span class="badge bg-primary">React</span></p>
                         <h6>Steve Jobs</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptatibus perferendis deleniti, totam fuga sequi iste! Facilis explicabo repellat ut similique incidunt? Ullam nobis beatae, corporis facilis veniam magni ratione!</p>
@@ -79,7 +77,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./assets/images/bill.jpg">
+                        <img src="./assets/images/bill.jpg" alt="Bill Gates">
                         <p><span class="badge bg-warning text-black">JavaScript</span><span class="badge bg-primary">React</span></p>
                         <h6>Bill Gates</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptatibus perferendis deleniti, totam fuga sequi iste! Facilis explicabo repellat ut similique incidunt? Ullam nobis beatae, corporis facilis veniam magni ratione!</p>
@@ -87,7 +85,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./assets/images/ada.jpeg">
+                        <img src="./assets/images/ada.jpeg" alt="Ada Lovelace">
                         <p><span class="badge bg-secondary">Negocios</span><span class="badge bg-danger">Startups</span></p>
                         <h6>Ada Lovelace</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptatibus perferendis deleniti, totam fuga sequi iste! Facilis explicabo repellat ut similique incidunt? Ullam nobis beatae, corporis facilis veniam magni ratione!</p>
@@ -117,7 +115,7 @@
         <div class="d-flex flex-column align-items-center my-3">
           <h6 class="text-uppercase text-center">Conviértete en un</h6>
           <h1 class="text-uppercase text-center">orador</h1>
-          <p class="text-center">Anótate como orador para dar una <span style="text-decoration: underline; text-decoration-style: dotted;">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
+          <p class="text-center" id="orador">Anótate como orador para dar una <span style="text-decoration: underline; text-decoration-style: dotted;">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
         </div>
       </section>
   
@@ -149,7 +147,7 @@
 
     
     <footer>
-        <ul class="nav mt-3 py-4 justify-content-center">
+        <ul class="nav mt-3 py-4 ms-12 justify-content-center">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Preguntas frecuentes</a>
             </li>
