@@ -12,6 +12,8 @@ $("#nombre").keyup(habilitar);
 $("#apellido").keyup(habilitar);
 $("#email").keyup(habilitar);
 $("#tickets").keyup(habilitar);
+$("#Categoria").change(habilitar);
+
 
 
 
@@ -31,7 +33,7 @@ general.addEventListener('click', ()=>{
 })
 
 function obtenerDescuento(){
-    const cat= document.getElementById("Categoria").value;
+    let cat= document.getElementById("Categoria").value;
     let descuento;
     switch(cat){
         case "estudiante":
@@ -74,6 +76,7 @@ function habilitar(){
         $("#boton-resumen").attr("disabled", false);
     } else {
         $("#boton-resumen").attr("disabled", true);
+        document.getElementById('total').innerHTML = 'Total a Pagar: $ ';
     }
 }
 
