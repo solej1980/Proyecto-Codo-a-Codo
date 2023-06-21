@@ -12,7 +12,7 @@ $("#nombre").keyup(habilitar);
 $("#apellido").keyup(habilitar);
 $("#email").keyup(habilitar);
 $("#tickets").keyup(habilitar);
-$("#Categoria").change(habilitar);
+
 
 
 estudiante.addEventListener('click', ()=>{
@@ -63,6 +63,9 @@ function habilitar(){
         valor++;
     }
     if (e==''){
+        valor++;
+    }
+    if (c==''){
         valor++;
     }
     if (valor==0){
