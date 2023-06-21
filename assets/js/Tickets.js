@@ -1,12 +1,17 @@
 
 let inputs = document.querySelectorAll("input");
-let categorias = document.getElementById("Categoria");
+const categoria = document.getElementById("Categoria").value;
 let botonResumen = document.getElementById("boton-resumen");
 let botonBorrar = document.getElementById("boton-borrar");
-let cartaA = document.getElementById("estudiante");
-let cartaB = document.getElementById("trainee");
-let cartaC = document.getElementById("junior");
+let estudiante = document.getElementById("estudiante");
+let trainee = document.getElementById("trainee");
+let junior = document.getElementById("junior");
 let general = document.getElementById("general");
+const n= document.getElementById("nombre").value;
+const a= document.getElementById("apellido").value;
+const e= document.getElementById("email").value;
+const c= document.getElementById("tickets").value;
+
 $("#boton-resumen").attr("disabled", true);
 $("#nombre").keyup(habilitar);
 $("#apellido").keyup(habilitar);
@@ -15,23 +20,23 @@ $("#tickets").keyup(habilitar);
 $("#Categoria").change(habilitar);
 
 
-cartaA.addEventListener('click', ()=>{
+estudiante.addEventListener('click', ()=>{
     document.getElementById("Categoria").selectedIndex="1";
 })
 
-cartaB.addEventListener('click', ()=>{
+trainee.addEventListener('click', ()=>{
     document.getElementById("Categoria").selectedIndex="2";
 })
 
-cartaC.addEventListener('click', ()=>{
+junior.addEventListener('click', ()=>{
     document.getElementById("Categoria").selectedIndex="3";
 })
 general.addEventListener('click', ()=>{
     document.getElementById("Categoria").selectedIndex="4";
 })
 
-function obtenerdescuento(){
-    let categoria = document.getElementById("Categoria").value;
+function obtenerDescuento(){
+    
     let descuento;
     switch(categoria){
         case "estudiante":
@@ -51,12 +56,6 @@ function obtenerdescuento(){
 
 
 function habilitar(){
-    let n= document.getElementById("nombre").value;
-    let a= document.getElementById("apellido").value;
-    let e= document.getElementById("email").value;
-    let c= document.getElementById("tickets").value;
-    
-
     let valor = 0;
     if (n==''){
         valor++;
@@ -70,7 +69,6 @@ function habilitar(){
     if (c==''){
         valor++;
     }
-    
     
     if (valor==0){
         let descuento=obtenerdescuento();
@@ -87,12 +85,8 @@ botonBorrar.addEventListener('click', ()=>{
     $("#boton-resumen").attr("disabled", true);
 });
 botonResumen.addEventListener('click', ()=>{
-    let nombre= document.getElementById("nombre").value;
-    let apellido= document.getElementById("apellido").value;
-    let email= document.getElementById("email").value;
-    let cantidad= document.getElementById("tickets").value;
     let descuento= obtenerDescuento();
-    document.getElementById('resumen').innerHTML = `Procesando... ` + 200 * descuento * cantidad;
+    document.getElementById('transaccion').innerHTML = `Procesando... `;
     }
 );
 
