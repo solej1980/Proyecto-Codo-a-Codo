@@ -8,15 +8,6 @@
     background-color: #4d5059;
 }
 
-
-.texto-flotante{
-    top: 15vw;
-    position: absolute;
-    width: 100%;
-    left:30vw;
-   
-   
-}
 .carousel-item img{
     width: 100%;
     height: 80vh;
