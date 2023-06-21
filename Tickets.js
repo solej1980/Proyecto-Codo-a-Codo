@@ -1,16 +1,11 @@
 
-let inputs = document.querySelectorAll("input");
-const categoria = document.getElementById("Categoria").value;
-let botonResumen = document.getElementById("boton-resumen");
-let botonBorrar = document.getElementById("boton-borrar");
-let estudiante = document.getElementById("estudiante");
-let trainee = document.getElementById("trainee");
-let junior = document.getElementById("junior");
-let general = document.getElementById("general");
-const n= document.getElementById("nombre").value;
-const a= document.getElementById("apellido").value;
-const e= document.getElementById("email").value;
-const c= document.getElementById("tickets").value;
+const inputs = document.querySelectorAll("input");
+const botonResumen = document.getElementById("boton-resumen");
+const botonBorrar = document.getElementById("boton-borrar");
+const estudiante = document.getElementById("estudiante");
+const trainee = document.getElementById("trainee");
+const junior = document.getElementById("junior");
+const general = document.getElementById("general");
 
 $("#boton-resumen").attr("disabled", true);
 $("#nombre").keyup(habilitar);
@@ -36,9 +31,9 @@ general.addEventListener('click', ()=>{
 })
 
 function obtenerDescuento(){
-    
+    const cat= document.getElementById("Categoria").value;
     let descuento;
-    switch(categoria){
+    switch(cat){
         case "estudiante":
             descuento=0.2;
             break;
@@ -56,6 +51,10 @@ function obtenerDescuento(){
 
 
 function habilitar(){
+    let n= document.getElementById("nombre").value;
+    let a= document.getElementById("apellido").value;
+    let e= document.getElementById("email").value;
+    let c= document.getElementById("tickets").value;
     let valor = 0;
     if (n==''){
         valor++;
@@ -66,12 +65,8 @@ function habilitar(){
     if (e==''){
         valor++;
     }
-    if (c==''){
-        valor++;
-    }
-    
     if (valor==0){
-        let descuento=obtenerdescuento();
+        let descuento=obtenerDescuento();
         document.getElementById('total').innerHTML = 'Total a Pagar: $ ' + 200 * descuento * c; 
         $("#boton-resumen").attr("disabled", false);
     } else {
